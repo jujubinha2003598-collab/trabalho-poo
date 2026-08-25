@@ -1,4 +1,4 @@
-class motor:
+class Motor:
   def __init__(self, potencia):
     self.potencia = potencia
   def mostrar_info(self):
