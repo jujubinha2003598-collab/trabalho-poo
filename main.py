@@ -21,4 +21,26 @@ if opcao == "1":
     nome = input("Nome completo: ")
     cpf = input("CPF:")
     cliente = Cliente(nome, cpf)
-    
+     locadora.adicionar_cliente(cliente)
+    print("\nCliente cadastrado com sucesso!")
+elif  opcao == "2":
+    placa = input("Placa: ")
+    modelo = input("Modelo: ")
+    ano = int(input("Ano: "))
+    portas = int(input("Quantidade de portas: "))
+    potencia = int(input("Potência do motor: "))
+    carro = Carro(placa, modelo, ano, portas, potencia)
+    locadora.adicionar_veiculo(carro)
+    print("\nCarro cadastrado com sucesso!")
+ elif opcao == "3":
+    placa = input("Placa: ")
+    modelo = input("Modelo: ")
+    ano = int(input("Ano: "))
+    potencia = int(input("Potência do motor: "))
+    cilindradas = int(input("Cilindradas: "))
+    moto = Moto(placa, modelo, ano, potencia, cilindradas)
+    locadora.adicionar_veiculo(moto)
+    print("\nMoto cadastrada com sucesso!")
+elif opcao == "4":
+    print("\n====== VEÍCULOS ======")
+    locadora.listar_veiculos()
