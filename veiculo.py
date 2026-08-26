@@ -5,7 +5,7 @@ class Veiculo:
         self.placa = placa
         self.modelo = modelo
         self.ano = ano
-        self.motor = motor
+        self.motor = Motor
 
     def calcular_diaria(self):
         return 100
