@@ -46,9 +46,7 @@ elif opcao == "4":
     locadora.listar_veiculos()
 elif opcao == "5":
     print("\n====== FAZER ALUGUEL ======")
-
     cpf = input("CPF do cliente: ")
-
     cliente = locadora.buscar_cliente(cpf)
 
     if cliente is None:
@@ -56,7 +54,6 @@ elif opcao == "5":
         continue
 
     placa = input("Placa do veículo: ")
-
     veiculo = locadora.buscar_veiculo(placa)
 
     if veiculo is None:
@@ -64,10 +61,7 @@ elif opcao == "5":
         continue
 
     dias = int(input("Quantidade de dias: "))
-
     aluguel = Aluguel(cliente, veiculo, dias)
-
     locadora.adicionar_aluguel(aluguel)
-
     print("\nAluguel realizado com sucesso!")
     print(aluguel.mostrar_info())
