@@ -13,5 +13,15 @@ class Locadora:
     def listar_veiculos(self):
         for veiculo in self.veiculos:
             print(veiculo.mostrar_info())
+    def buscar_cliente(self, cpf):
+        for cliente in self.clientes:
+            if cliente.cpf == cpf:
+                return cliente
+        return None
 
+    def buscar_veiculo(self, placa):
+        for veiculo in self.veiculos:
+            if veiculo.placa == placa:
+                return veiculo
+        return None
         
